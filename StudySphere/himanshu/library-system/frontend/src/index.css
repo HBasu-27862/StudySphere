@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Navbar styles */
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #4e73df !important;
+}
+
+/* Card styles */
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.1);
+}
+
+.card-header {
+  background-color: #f8f9fc;
+  border-bottom: 1px solid #e3e6f0;
+  font-weight: 700;
+  color: #4e73df;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #4e73df;
+  border-color: #4e73df;
+}
+
+.btn-primary:hover {
+  background-color: #2e59d9;
+  border-color: #2653d4;
+}
+
+/* Table styles */
+.table {
+  margin-bottom: 0;
+}
+
+.table thead th {
+  background-color: #f8f9fc;
+  border-bottom: 2px solid #e3e6f0;
+  color: #4e73df;
+  font-weight: 600;
+}
+
+/* Form styles */
+.form-control:focus {
+  border-color: #bac8f3;
+  box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+}
+
+/* Dashboard stats */
+.stat-card {
+  border-left: 4px solid;
+  padding: 1.5rem;
+}
+
+.stat-card.primary {
+  border-left-color: #4e73df;
+}
+
+.stat-card.success {
+  border-left-color: #1cc88a;
+}
+
+.stat-card.info {
+  border-left-color: #36b9cc;
+}
+
+.stat-card.warning {
+  border-left-color: #f6c23e;
+}
+
+.stat-card .stat-label {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #858796;
+}
+
+.stat-card .stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #5a5c69;
+}
+
+/* Seat grid */
+.seat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 10px;
+  padding: 20px;
+}
+
+.seat {
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.seat.available {
+  background-color: #1cc88a;
+  color: white;
+}
+
+.seat.available:hover {
+  background-color: #17a676;
+  transform: scale(1.05);
+}
+
+.seat.occupied {
+  background-color: #e74a3b;
+  color: white;
+  cursor: not-allowed;
+}
+
+.seat.selected {
+  background-color: #36b9cc;
+  color: white;
+  box-shadow: 0 0 10px rgba(54, 185, 204, 0.5);
+}
+
+/* Search bar */
+.search-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-input {
+  border-radius: 50px;
+  padding: 12px 25px;
+  border: 2px solid #e3e6f0;
+  font-size: 1rem;
+}
+
+.search-input:focus {
+  border-color: #4e73df;
+}
+
+/* Book card */
+.book-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 2rem 0 rgba(58, 59, 69, 0.2);
+}
+
+.book-card .card-body {
+  padding: 1.25rem;
+}
+
+.book-card .book-title {
+  font-weight: 700;
+  color: #4e73df;
+  margin-bottom: 0.5rem;
+}
+
+.book-card .book-author {
+  color: #858796;
+  font-size: 0.9rem;
+}
+
+.book-card .book-subject {
+  display: inline-block;
+  background-color: #e3e6f0;
+  color: #4e73df;
+  padding: 3px 10px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  margin-top: 10px;
+}
+
+/* Availability badge */
+.badge-available {
+  background-color: #1cc88a;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+}
+
+.badge-unavailable {
+  background-color: #e74a3b;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+}
+
+/* Status badges */
+.status-borrowed {
+  color: #36b9cc;
+  font-weight: 600;
+}
+
+.status-returned {
+  color: #1cc88a;
+  font-weight: 600;
+}
+
+.status-overdue {
+  color: #e74a3b;
+  font-weight: 600;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  color: #4e73df;
+}
+
+/* Alert styles */
+.alert {
+  border-radius: 10px;
+  border: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stat-card {
+    margin-bottom: 15px;
+  }
+  
+  .seat-grid {
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  }
+}
